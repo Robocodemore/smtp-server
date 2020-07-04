@@ -16,7 +16,7 @@ router.post('/smtp/send', function({body: {
   send({
     user: config[user].email,
     pass: config[user].password,
-    to:   'selena2304@gmail.com',
+    to:   config[user].to,
     subject: 'test subject',
     text:    'gmail-send example 1',
   })({
